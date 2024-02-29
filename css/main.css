@@ -3,13 +3,18 @@ body { /*default mobile version of site*/
     display: grid;
     grid-template-columns: 100vh;
     grid-template-areas: "head" "nav" "main" "aside" "foot";
-  
   }
   
   header, nav, main, aside, footer {
-    text-align: center;
+    height: auto;
+    width: 100vw;
+    text-align: left;
   }
   
+  p {
+    white-space: pre;
+  }
+
   header {
     background: cornflowerblue;
     grid-area: head;
@@ -18,6 +23,7 @@ body { /*default mobile version of site*/
   nav {
     background: khaki;
     grid-area: nav;
+
   }
   
   main {
@@ -39,13 +45,19 @@ body { /*default mobile version of site*/
     display: block;
   }
   
+  .gallery {
+    display: none;
+  }
+
+  .about {
+    display: none;
+  }
+
   .contact {
     display: none;
   }
   
-  .photo {
-    display: none;
-  }
+  
   
   /* Nav Bar Style */
   ul {
@@ -73,12 +85,17 @@ body { /*default mobile version of site*/
   @media all and (min-width: 600px) {
     body {
       grid-template-columns: 20vw auto;
-      grid-template-rows: 10vh 40vh 40vh 10vh;
+      grid-template-rows: 15vh 40vh 40vh 10vh;
       grid-template-areas: 
         "head head"
         "nav main"
         "aside main"
         "foot foot";
+    }
+    header, nav, main, aside, footer {
+      width: auto;
+      height: auto;
+      text-align: left;
     }
   }
   
@@ -91,5 +108,9 @@ body { /*default mobile version of site*/
         "head head head"
         "nav main aside"
         "foot foot foot";
+    }
+    header, nav, main, aside, footer {
+      width: auto;
+      text-align: center;
     }
   }
