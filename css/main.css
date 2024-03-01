@@ -1,4 +1,6 @@
 body { /*default mobile version of site*/
+    padding: 0px;
+    margin: 0px;
     font-size: 2.5em;
     display: grid;
     grid-template-columns: 100vh;
@@ -11,24 +13,24 @@ body { /*default mobile version of site*/
     text-align: left;
   }
   
-  p {
-    white-space: pre;
-  }
-
   header {
     background: cornflowerblue;
     grid-area: head;
+
   }
   
   nav {
-    background: khaki;
     grid-area: nav;
-
+    color: black;
   }
   
   main {
     background: darkseagreen;
     grid-area: main;
+  }
+
+  img {
+    max-width: 100%;
   }
   
   aside {
@@ -61,17 +63,24 @@ body { /*default mobile version of site*/
   
   /* Nav Bar Style */
   ul {
+    background: lightgray;
     list-style-type: none;
     text-align: center;
     display: flex;
-    flex-direction: column;
-    font-size: small;
+    flex-direction: row;
+    font-size: large;
+    justify-content: space-around;
+    padding: 10px;
   }
   
+  li {
+    background: darkgray;
+    padding: 5px 5vw;
+    margin: 0px 5px;
+  }
+
   li a {
     display: block;
-    color: black;
-    text-decoration: none;
   }
   
   li a:hover {
@@ -84,12 +93,12 @@ body { /*default mobile version of site*/
   /* Tablet CSS Code */
   @media all and (min-width: 600px) {
     body {
-      grid-template-columns: 20vw auto;
-      grid-template-rows: 15vh 40vh 40vh 10vh;
+      grid-template-columns: 100vw;
+      grid-template-rows: 20vh 10vh 60vh 10vh;
       grid-template-areas: 
         "head head"
-        "nav main"
-        "aside main"
+        "nav nav"
+        "main main"
         "foot foot";
     }
     header, nav, main, aside, footer {
@@ -105,12 +114,24 @@ body { /*default mobile version of site*/
       grid-template-columns: 20vw auto 20vw;
       grid-template-rows: 20vh 70vh 10vh;
       grid-template-areas: 
-        "head head head"
-        "nav main aside"
-        "foot foot foot";
+        "head"
+        "nav"
+        "main"
+        "foot";
     }
+
     header, nav, main, aside, footer {
       width: auto;
-      text-align: center;
+      text-align: left;
     }
+
+    nav{
+        width: 50vw;
+    }
+
+    li {
+        background: darkgray;
+        padding: 5px 2vw;
+        margin: 0px 5px;
+      }
   }
