@@ -7,5 +7,5 @@ function toggleDisplay(className) {
         section.style.display = 'none';
     });
     //change display=block for className section in DOM
-    document.querySelector(`.${className}`).style.display='block';
+    document.querySelector(`.${className}`).style.display='grid';
 }

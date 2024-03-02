@@ -1,4 +1,25 @@
 <!DOCTYPE html>
+<!-- Project:  Project3-Responsive Web Site-Topic of your Choice
+Name: <Student Name Here>
+Submitted: <Submit Date Here>
+ 
+I declare that the following source code was written by me, or provided
+by the instructor for this project. I understand that copying source
+code from any other source, providing source code to another student, 
+or leaving my code on a public web site constitutes cheating.
+I acknowledge that  If I am found in violation of this policy this may result
+in a zero grade, a permanent record on file and possibly immediate failure of the class.
+ 
+Reflection:  I really enjoyed designing this website. I think there are a lot of neat ways 
+to make the website look and behave like you want it to. I also think it is a good thing 
+I shave my head, because otherwise css would make me pull my hair out. Fine tuning with css 
+to make the site look exactly like I wanted to was an absolute nightmare, with little things 
+it does automatically often screwing up things either with different page elements or with 
+different responsive layouts. Granted, it is all still new and there are better ways and all 
+that, but I was very unhappy with what I had to do to get the designs just right in this 
+implementation of my website. Despite all of that, I am happy with what I was able to do, 
+and wish I had more time to fine-tune things further. -->
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -10,9 +31,10 @@
 <body>
     <Header>
         <p>CRESSWELL
-            <br> ART
+            <br>ART
         </p>
     </Header>
+
     <nav>
         <ul>
             <li a onclick="toggleDisplay('home')"> Homepage</li>
@@ -24,15 +46,85 @@
 
     <main>
         <section class="home">
-            <img src="/img/big_ticket.jpg" alt="big ticket item">
+            <figure>
+                <figcaption>New Sculpures Available!</figcaption>
+                <picture>
+                    <source srcset="/img/big_ticket_desktop_wider.jpg" media="(min-width: 1200px)"/>
+                    <source srcset="/img/big_ticket_desktop.jpg" media="(min-width: 900px)"/>
+                    <source srcset="/img/big_ticket_tablet.jpg" media="(min-width: 600px)"/>
+                    <img src="/img/big_ticket.jpg" alt="big ticket item">
+                </picture>
+            </figure>
         </section>
-        <section class="gallery">Gallery Content</section>
-        <section class="about">About Content</section>
-        <section class="contact">contact Content</section>
+
+        <section class="gallery">
+            <div class="footprint_gallery">
+                <img src="/img/footprint_whole.jpg" alt="footprint full gallery">
+                <img src="/img/footprint_side.jpg" alt="footprint side">
+                <img src="/img/footprint_back.jpg" alt="footprint back">
+                <img src="/img/footprint_close.jpg" alt="footprint close up">
+            </div>
+        </section>
+
+        <section class="about">
+            <div id="about_section">
+                <div id="about_text">
+                    <p>Morgan makes work exploring human thoughts and personalities in both the group and
+                        individual levels through collage, painting, printmaking, and photography. She 
+                        has exhibited work in the UVU Woodbury museum of art, The Snow College Gallery,
+                         and Student Galleries. Morgan is an AFA Graduate from Snow College.</p>
+                   <p>Justin Cresswell is a Utah based sculptor. He graduated from Grand County High School
+                        in 2014 and graduated from Snow College in Ephraim in 2020. He is the son of a 
+                        wandering cowboy, and has spent time in Texas, Colorado, Idaho, and Utah. 
+                       He has shown work in the Snow College Gallery, The Annex Gallery, and the Moab Museum 
+                       Gallery. He has had works displayed in the exhibitions Artists in Residence, Works in 
+                       Progress, Stewardship, and Material Cognitive.</p>
+                </div>
+                <div id="events">
+                    <p>Events coming soon!</p>
+                </div>
+                <div id="artist_portrait">
+                    <img src="/img/portrait.jpg" alt="The Artists">
+                </div>
+            </div>    
+        </section>
+
+        <section class="contact">
+            <div id="contact_content">
+                <div id="input_contact">
+                    <label for="name">Name:</label>
+                    <input type="text" id="fname" name="fname"><br><br>
+                    <label for="email">Email:</label>
+                    <input type="text" id="lname" name="lname"><br><br>
+                    <input type="submit" value="Add me to the Email List!"> 
+                </div>
+                <div id="contact_info">
+                    <ul>
+                        <li>business address</li>
+                        <li>justinmcresswell@outlook.com</li>
+                        <li>business phone</li>
+                        <li>business fax</li>
+                        <li>gallery location</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
     </main>
 
-    <aside> Aside </aside>
-    <footer> Footer </footer>
+    <footer> 
+        <div>
+            <img src="/img/logo.png" alt="logo">
+        </div>
+        <div>
+            <ul>
+                <li>Contact Us: </li>
+                <li>business address</li>
+                <li>justinmcresswell@outlook.com</li>
+                <li>business phone</li>
+            </ul>
+        </div>
+    </footer>
 
 </body>
 </html>
