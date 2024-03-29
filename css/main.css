@@ -286,6 +286,7 @@ body { /*default mobile version of site*/
       text-align: bottom;
       margin-bottom: 0;
       padding-bottom: 0;
+      overflow: hidden;
     }
 
     figcaption {
