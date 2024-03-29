@@ -9,3 +9,11 @@ function toggleDisplay(className) {
     //change display=block for className section in DOM
     document.querySelector(`.${className}`).style.display='grid';
 }
+
+
+function toggleNightmode() {
+    const nightmode = document.createElement('link')
+    nightmode.rel = 'stylesheet'
+    nightmode.href = '/css/nightmode.css'
+    document.head.appendChild(nightmode)
+}
