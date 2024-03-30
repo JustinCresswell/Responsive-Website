@@ -190,9 +190,13 @@ body { /*default mobile version of site*/
     margin-top: 20px;
     display: inline;
     color:white;
-    background-color: rgb(42, 71, 71);
+    background-color: rgb(71, 71, 71);
     font-size: medium;
     text-align: center;
+  }
+
+  #nightmodeButton:hover {
+    background-color: rgb(189, 189, 189);
   }
   
   

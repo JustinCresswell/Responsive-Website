@@ -1,0 +1,78 @@
+body {
+    background-color: rgba(20,32,71,255);
+    color: white;
+    grid-template-areas: "main" "nav" "head" "foot" "night";
+}
+
+header {
+    background-color:rgba(31,50,98,255);
+}
+
+nav ul {
+    background: rgba(31,50,98,255);
+}
+  
+nav li {
+    background: rgb(25,36,85);
+    color: rgba(194,169,41,255);
+    text-shadow: 0 0 10px rgba(255, 245, 110, 0.8), 
+                0 0 40px rgba(68, 67, 32, 0.2);
+}
+
+nav li:hover {
+    background: rgba(69,96,146,255)
+}
+
+footer ul {
+    background: rgba(20,32,71,255);
+}
+
+#about_text {
+    background: rgba(31,50,98,255);
+}
+
+#events {
+    background-color: rgba(31,50,98,255);
+}
+
+#input_contact {
+    background-color: rgba(31,50,98,255);
+}
+
+.contact #contact_info ul{
+    background: rgba(31,50,98,255);
+  }
+
+#nightmodeButton {
+    background-color: rgba(31,50,98,255);
+}
+
+@media all and (min-width: 600px) {
+    body {
+      grid-template-rows: 60vh 10vh 15vh 10vh;
+      grid-template-areas: 
+        "main"
+        "nav"
+        "head"
+        "foot";
+    }
+}
+
+@media all and (min-width: 900px) {
+    body {
+        grid-template-columns: 50vw 50vw;
+        grid-template-rows: 65vh 15vh 10vh;
+        grid-template-areas: 
+        "main main"
+        "head nav"
+        "foot foot";
+    }
+
+    header {
+        display: grid;
+    }
+
+    main {
+        background-color: rgba(31,50,98,255);
+    }
+}
