@@ -1,7 +1,6 @@
 var state = "day"
 
 const nightmodeButton = document.getElementById('nightmodeButton')
-
 nightmodeButton.addEventListener('click', toggleNightmode)
 
 function toggleDisplay(className) {
@@ -31,3 +30,8 @@ function toggleNightmode() {
         state = "day"
     }
 }
+
+// Call initValidation function with form selector
+document.addEventListener("DOMContentLoaded", function(event) {    
+    initValidation("#myform");
+});

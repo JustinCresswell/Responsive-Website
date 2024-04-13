@@ -20,6 +20,7 @@ this one was much less nightmarish getting everything to work right.-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project 3</title>
+    <script defer src="/js/validate.js"></script>
     <script defer src="/js/main.js"></script>
     <link rel="stylesheet" href="/css/main.css" />
 </head>
@@ -40,6 +41,7 @@ this one was much less nightmarish getting everything to work right.-->
             <li a onclick="toggleDisplay('gallery')"> Photo Gallery</li>
             <li a onclick="toggleDisplay('about')"> About</li>
             <li a onclick="toggleDisplay('contact')"> Contact</li>
+            <li a onclick="toggleDisplay('visitor')"> Visitor</li>
         </ul>
     </nav>
 
@@ -91,10 +93,10 @@ this one was much less nightmarish getting everything to work right.-->
         <section class="contact">
             <div id="contact_content">
                 <div id="input_contact">
-                    <label for="name">Name:</label>
+                    <label for="fname">Name:</label>
                     <input type="text" id="fname" name="fname"><br><br>
                     <label for="contactEmail">Email:</label>
-                    <input type="text" id="lname" name="lname"><br><br>
+                    <input type="text" id="contactEmail" name="contactEmail"><br><br>
                     <input type="submit" value="Add me to the Email List!"> 
                 </div>
                 <div id="contact_info">
@@ -111,30 +113,63 @@ this one was much less nightmarish getting everything to work right.-->
         </section>
 
         <section class="visitor">
-            <form>
-                <label for="name">First, Last name:</label>
-                <input type="text" id="name" name="name" required>
-                <!-- address -->
-                <label for="address">Address:</label>
-                <input type="text" id="address" name="address" required>
-                <label for="city">City:</label>
-                <input type="text" id="city" name="city" required>
-                <label for="state">State:</label>
-                <input type="text" id="state" name="state" required>
-                <label for="zip">Zip:</label>
-                <input type="text" id="zip" name="zip" required>
-                <label for="phone">Cell Phone:</label>
-                <input type="text" id="phone" name="phone" required>
-                <label for="email">Email Address:</label>
-                <input type="text" id="email" name="email" required>
-                <!-- checkbox -->
-                <label for="find">How did you find my page?</label>
-                <input type="checkbox" id="find" name="find" required>
-                <label for="comments">Comments:</label>
-                <input type="textarea" id="comments" name="comments">
-                <input type="submit" id="submitBtn">
-                
-                
+            <form id="myform" novalidate>
+                <h1>Log Visit</h1>
+                <div id="nameBox" class="input-control">
+                    <label for="name">First, Last Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <div class="error"></div>
+                </div>
+                <ul id="addressBox" class="input-control">
+                    <li>
+                        <label for="address">Street Address:</label>
+                        <input type="text" id="address" name="address" required>
+                        <div class="error"></div>
+                    </li>
+                    <li>
+                        <label for="city">City:</label>
+                        <input type="text" id="city" name="city" required>
+                        <div class="error"></div>
+                    </li>
+                    <li>
+                        <label for="state">State:</label>
+                        <input type="text" id="state" name="state" required>
+                        <div class="error"></div>
+                    </li>
+                    <li>
+                        <label for="zip">Zip:</label>
+                        <input type="text" id="zip" name="zip" required>
+                        <div class="error"></div>
+                    </li>
+                    <li>
+                        <label for="phone">Cell Phone:</label>
+                        <input type="text" id="phone" name="phone" required>
+                        <div class="error"></div>
+                    </li>
+                    <li>
+                        <label for="email">Email Address:</label>
+                        <input type="text" id="email" name="email" required>
+                        <div class="error"></div>
+                    </li>
+                </ul>
+                <div id="checkbox" class="input-control">
+                    <h1>How did you find my page?</h1>
+                    <label for="internet">Internet</label>
+                    <input type="checkbox" id="internet" name="internet" required>
+                    <label for="friend">Friend</label>
+                    <input type="checkbox" id="friend" name="friend" required>
+                    <label for="local">Local Advertisement</label>
+                    <input type="checkbox" id="local" name="local" required>
+                    <div class="error"></div>
+                </div>
+                <div id="commentBox" class="input-control">
+                    <label for="comments">Comments:</label>
+                    <textarea id="comments" name="comments"></textarea>
+                    <div class="error"></div>
+                </div>
+                <div id="submitBox">
+                    <input type="submit" id="submitBtn">
+                </div>
             </form>
         </section>
     </main>
