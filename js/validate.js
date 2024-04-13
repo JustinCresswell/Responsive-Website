@@ -179,6 +179,7 @@ function initValidation(formSelector) {
         }
     }
 
+    //this is what onChange became because of how I set up my code
     availableFields.forEach(function(field, index) {
         field.addEventListener('blur', function() {
             validFields[index]();

@@ -10,10 +10,13 @@ or leaving my code on a public web site constitutes cheating.
 I acknowledge that  If I am found in violation of this policy this may result
 in a zero grade, a permanent record on file and possibly immediate failure of the class.
  
-Reflection:  I'm learning css better, so this one wasn't as bad, but there
-were still some strange behaviors I had to look into and tinker with. Javascript
-can be kind of wonky as well, but it behaved for me for this project. Overall,
-this one was much less nightmarish getting everything to work right.-->
+Reflection:  I definitely didn't give myself enough time to finish the javascript :/ It takes
+time to make it all work, and it doesn't always work like I thought it would. I had to scrap
+my structure like three times because I didn't like how additional functions were building on top
+of the earlier functions. I'm happy with how I organized it in the end. I think it is very scalable.
+CSS was a bit of a nightmare, as always, but I found some solutions that worked well in the end.
+I'm glad my previous efforts to structure the site so that it is scalable, so I didn't need to modify
+much css or html, making this whole adventure much more doable.-->
 
 <html lang="en">
 <head>
@@ -154,13 +157,15 @@ this one was much less nightmarish getting everything to work right.-->
                 </ul>
                 <div id="checkbox" class="input-control">
                     <h1>How did you find my page?</h1>
-                    <label for="internet">Internet</label>
-                    <input type="checkbox" id="internet" name="internet" required>
-                    <label for="friend">Friend</label>
-                    <input type="checkbox" id="friend" name="friend" required>
-                    <label for="local">Local Advertisement</label>
-                    <input type="checkbox" id="local" name="local" required>
+                    <div id="checkmarks">
+                        <label for="internet">Internet</label>
+                        <input type="checkbox" id="internet" name="internet" required>
+                        <label for="friend">Friend</label>
+                        <input type="checkbox" id="friend" name="friend" required>
+                        <label for="local">Local Advertisement</label>
+                        <input type="checkbox" id="local" name="local" required>
                     <div class="error"></div>
+                    </div>
                 </div>
                 <div id="commentBox" class="input-control">
                     <label for="comments">Comments:</label>

@@ -47,6 +47,20 @@ footer ul {
     background-color: rgba(31,50,98,255);
 }
 
+form {
+    background-color: rgb(25,36,85);
+    color: white;
+}
+
+input[type=submit] {
+    color: white;
+    background-color: rgba(31,50,98,255);
+}
+
+  input[type=submit]:hover {
+    background-color: rgba(69,96,146,255);
+}
+
 @media all and (min-width: 600px) {
     body {
       grid-template-rows: 60vh 10vh 15vh 10vh;

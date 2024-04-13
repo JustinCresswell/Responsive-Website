@@ -198,7 +198,6 @@ body { /*default mobile version of site*/
  
   input[type=submit]:hover {
     background-color: rgb(128, 128, 128);
-    width: 50%;
   }
  
   .invalid input{
@@ -219,6 +218,11 @@ body { /*default mobile version of site*/
     flex-wrap: wrap;
     list-style-type: none;
     padding: 0;
+    text-align: left;
+  }
+
+  #addressBox label {
+    display: block;
   }
 
   textarea {
@@ -227,7 +231,25 @@ body { /*default mobile version of site*/
 
   #checkbox {
     display: flex;
+    justify-content: center;
+    vertical-align: middle;
+    padding: 15px;
   }
+
+  input[type="checkbox"] {
+    width: 1em;
+    height: 1rem;
+    accent-color: green;
+    vertical-align: middle;
+  }
+
+  #checkmarks {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    text-align: right;
+  }
+
 
   /* Nav Bar Style */
   nav {
@@ -287,7 +309,7 @@ body { /*default mobile version of site*/
   @media all and (min-width: 600px) {
     body {
       grid-template-columns: 100vw;
-      grid-template-rows: 15vh 10vh 60vh 10vh;
+      grid-template-rows: 15vh 10vh 65vh 10vh;
       grid-template-areas: 
         "head"
         "nav"
@@ -442,5 +464,12 @@ body { /*default mobile version of site*/
 
     #input_contact {
       margin: 20px;
+    }
+
+    #addressBox {
+      text-align: right;
+    }
+    #addressBox label {
+      display: inline;
     }
   }
